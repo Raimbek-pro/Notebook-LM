@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		63B4760B2DFEC41A00612874 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63B475ED2DFEC41700612874 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63B475F42DFEC41800612874;
+			remoteInfo = "Notebook LM";
+		};
+		63B476152DFEC41A00612874 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63B475ED2DFEC41700612874 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63B475F42DFEC41800612874;
+			remoteInfo = "Notebook LM";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63B475F52DFEC41800612874 /* Notebook LM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notebook LM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B4760A2DFEC41A00612874 /* Notebook LMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notebook LMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63B476142DFEC41A00612874 /* Notebook LMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Notebook LMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		63B475F72DFEC41800612874 /* Notebook LM */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Notebook LM";
+			sourceTree = "<group>";
+		};
+		63B4760D2DFEC41A00612874 /* Notebook LMTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Notebook LMTests";
+			sourceTree = "<group>";
+		};
+		63B476172DFEC41A00612874 /* Notebook LMUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Notebook LMUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63B475F22DFEC41800612874 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B476072DFEC41A00612874 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B476112DFEC41A00612874 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63B475EC2DFEC41700612874 = {
+			isa = PBXGroup;
+			children = (
+				63B475F72DFEC41800612874 /* Notebook LM */,
+				63B4760D2DFEC41A00612874 /* Notebook LMTests */,
+				63B476172DFEC41A00612874 /* Notebook LMUITests */,
+				63B475F62DFEC41800612874 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63B475F62DFEC41800612874 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63B475F52DFEC41800612874 /* Notebook LM.app */,
+				63B4760A2DFEC41A00612874 /* Notebook LMTests.xctest */,
+				63B476142DFEC41A00612874 /* Notebook LMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63B475F42DFEC41800612874 /* Notebook LM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63B4761E2DFEC41A00612874 /* Build configuration list for PBXNativeTarget "Notebook LM" */;
+			buildPhases = (
+				63B475F12DFEC41800612874 /* Sources */,
+				63B475F22DFEC41800612874 /* Frameworks */,
+				63B475F32DFEC41800612874 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				63B475F72DFEC41800612874 /* Notebook LM */,
+			);
+			name = "Notebook LM";
+			packageProductDependencies = (
+			);
+			productName = "Notebook LM";
+			productReference = 63B475F52DFEC41800612874 /* Notebook LM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63B476092DFEC41A00612874 /* Notebook LMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63B476212DFEC41A00612874 /* Build configuration list for PBXNativeTarget "Notebook LMTests" */;
+			buildPhases = (
+				63B476062DFEC41A00612874 /* Sources */,
+				63B476072DFEC41A00612874 /* Frameworks */,
+				63B476082DFEC41A00612874 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63B4760C2DFEC41A00612874 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				63B4760D2DFEC41A00612874 /* Notebook LMTests */,
+			);
+			name = "Notebook LMTests";
+			packageProductDependencies = (
+			);
+			productName = "Notebook LMTests";
+			productReference = 63B4760A2DFEC41A00612874 /* Notebook LMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		63B476132DFEC41A00612874 /* Notebook LMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63B476242DFEC41A00612874 /* Build configuration list for PBXNativeTarget "Notebook LMUITests" */;
+			buildPhases = (
+				63B476102DFEC41A00612874 /* Sources */,
+				63B476112DFEC41A00612874 /* Frameworks */,
+				63B476122DFEC41A00612874 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63B476162DFEC41A00612874 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				63B476172DFEC41A00612874 /* Notebook LMUITests */,
+			);
+			name = "Notebook LMUITests";
+			packageProductDependencies = (
+			);
+			productName = "Notebook LMUITests";
+			productReference = 63B476142DFEC41A00612874 /* Notebook LMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63B475ED2DFEC41700612874 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					63B475F42DFEC41800612874 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					63B476092DFEC41A00612874 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 63B475F42DFEC41800612874;
+					};
+					63B476132DFEC41A00612874 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 63B475F42DFEC41800612874;
+					};
+				};
+			};
+			buildConfigurationList = 63B475F02DFEC41700612874 /* Build configuration list for PBXProject "Notebook LM" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63B475EC2DFEC41700612874;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 63B475F62DFEC41800612874 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63B475F42DFEC41800612874 /* Notebook LM */,
+				63B476092DFEC41A00612874 /* Notebook LMTests */,
+				63B476132DFEC41A00612874 /* Notebook LMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63B475F32DFEC41800612874 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B476082DFEC41A00612874 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B476122DFEC41A00612874 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63B475F12DFEC41800612874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B476062DFEC41A00612874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63B476102DFEC41A00612874 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63B4760C2DFEC41A00612874 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63B475F42DFEC41800612874 /* Notebook LM */;
+			targetProxy = 63B4760B2DFEC41A00612874 /* PBXContainerItemProxy */;
+		};
+		63B476162DFEC41A00612874 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63B475F42DFEC41800612874 /* Notebook LM */;
+			targetProxy = 63B476152DFEC41A00612874 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		63B4761C2DFEC41A00612874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63B4761D2DFEC41A00612874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63B4761F2DFEC41A00612874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Notebook LM/Preview Content\"";
+				DEVELOPMENT_TEAM = 5BK3H6Y47F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raiymbek-omarov.Notebook-LM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63B476202DFEC41A00612874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Notebook LM/Preview Content\"";
+				DEVELOPMENT_TEAM = 5BK3H6Y47F;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raiymbek-omarov.Notebook-LM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63B476222DFEC41A00612874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5BK3H6Y47F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raiymbek-omarov.Notebook-LMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notebook LM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Notebook LM";
+			};
+			name = Debug;
+		};
+		63B476232DFEC41A00612874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5BK3H6Y47F;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raiymbek-omarov.Notebook-LMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Notebook LM.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Notebook LM";
+			};
+			name = Release;
+		};
+		63B476252DFEC41A00612874 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5BK3H6Y47F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raiymbek-omarov.Notebook-LMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Notebook LM";
+			};
+			name = Debug;
+		};
+		63B476262DFEC41A00612874 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5BK3H6Y47F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.raiymbek-omarov.Notebook-LMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Notebook LM";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63B475F02DFEC41700612874 /* Build configuration list for PBXProject "Notebook LM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63B4761C2DFEC41A00612874 /* Debug */,
+				63B4761D2DFEC41A00612874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63B4761E2DFEC41A00612874 /* Build configuration list for PBXNativeTarget "Notebook LM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63B4761F2DFEC41A00612874 /* Debug */,
+				63B476202DFEC41A00612874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63B476212DFEC41A00612874 /* Build configuration list for PBXNativeTarget "Notebook LMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63B476222DFEC41A00612874 /* Debug */,
+				63B476232DFEC41A00612874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63B476242DFEC41A00612874 /* Build configuration list for PBXNativeTarget "Notebook LMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63B476252DFEC41A00612874 /* Debug */,
+				63B476262DFEC41A00612874 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63B475ED2DFEC41700612874 /* Project object */;
+}
