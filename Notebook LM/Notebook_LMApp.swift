@@ -13,7 +13,7 @@ struct Notebook_LMApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NoteListBuilder.build()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
