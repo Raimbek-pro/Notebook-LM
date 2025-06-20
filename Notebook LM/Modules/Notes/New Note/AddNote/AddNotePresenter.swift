@@ -14,7 +14,7 @@ final class AddNotePresenter : ObservableObject{
     
     @Published var selectedImage: UIImage? = nil
 
-    
+    @Published var note : Note?
     private let interactor: AddNoteInteractor
     private let router: AddNoteRouter
 
@@ -34,9 +34,16 @@ final class AddNotePresenter : ObservableObject{
                let image = UIImage(data: data){
                 await   MainActor.run{
                     self.selectedImage = image
+                    interactor.addImage(content:image)
+                    note = interactor.note
+                    router.navigateToNoteDetail()
                 }
             }
         }
+        
+    
+        
+      
     }
     func addNote(title: String, content: String) {
         interactor.addNote(title: title, content: content)

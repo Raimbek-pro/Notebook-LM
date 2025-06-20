@@ -17,7 +17,7 @@ struct NoteListView: View {
                     Button(action: {
                         presenter.didSelectNote(note)
                     }){
-                        Text(note.text)
+                        Text(note.text ?? "")
                     }
                 }
                 .navigationTitle(Text("Notes"))

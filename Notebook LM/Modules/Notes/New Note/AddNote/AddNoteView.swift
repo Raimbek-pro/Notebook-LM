@@ -16,12 +16,19 @@ struct AddNoteView: View{
     
     //MARK: -observed for presenter
     @ObservedObject var presenter :AddNotePresenter
+    @ObservedObject var router: AddNoteRouter
     var body : some View{
         NavigationView{
             List {
                 Section (header: Text("New Notebook")){
+                    if let notedetail = presenter.note{
+                        NavigationLink(destination:NotesDetailbuilder.build(note: notedetail),isActive: $router.shouldNavigate){
+                            EmptyView()
+                        }
+                    }
                     Button("Upload image"){
                         isImagePickerPresented = true
+                     
                     }
                     .photosPicker(isPresented: $isImagePickerPresented,selection:$selectionImage,matching:.images)
                     if let selectedImage = presenter.selectedImage{
@@ -57,7 +64,8 @@ struct AddNoteView: View{
         .navigationTitle("New2 Notebook")
         .onChange(of: selectionImage) {
             presenter.loadImage(from: selectionImage)
-      
+            //router.navigateToNoteDetail(note: presenter.note
+            
         }
         
 

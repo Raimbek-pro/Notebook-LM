@@ -12,7 +12,7 @@ enum AddNoteBuilder {
        let interactor = AddNoteInteractor()
        let router = AddNoteRouter()
        let presenter = AddNotePresenter(interactor: interactor, router: router)
-       let view = AddNoteView(presenter: presenter)
+       let view = AddNoteView(presenter: presenter, router: router)
        return view
         
     }

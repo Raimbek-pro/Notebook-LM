@@ -5,11 +5,15 @@
 //  Created by Райымбек Омаров on 16.06.2025.
 //
 
+import Foundation
+
 protocol AddNoteRouterProtocol{
-    func navigateToNoteDetail( note: Note)
+    func navigateToNoteDetail()
 }
-final class AddNoteRouter :AddNoteRouterProtocol{
-    func navigateToNoteDetail( note: Note) {
-        print("go to \(note.text)")
+final class AddNoteRouter : AddNoteRouterProtocol,ObservableObject{
+    @Published var shouldNavigate = false
+    func navigateToNoteDetail( ) {
+        shouldNavigate = true
+     
     }
 }
