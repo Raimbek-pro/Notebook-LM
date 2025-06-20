@@ -6,21 +6,61 @@
 //
 
 import Foundation
+import SwiftUI
+import PhotosUI
 
 final class AddNotePresenter : ObservableObject{
+    
+    
+    @Published var selectedImage: UIImage? = nil
+
+    
     private let interactor: AddNoteInteractor
     private let router: AddNoteRouter
-    @Published var note: [Note] = []
+
     init(interactor: AddNoteInteractor, router: AddNoteRouter) {
         self.interactor = interactor
-        self.interactor.addNote(title: "", content: "")
-        self.interactor.addNote(title: "Test", content: "Test")
-        self.interactor.addNote(title: "Test2", content: "Test2")
+
         self.router = router
     }
     
     
+    
+    func  loadImage(from pickerItem: PhotosPickerItem?){
+        guard let pickerItem else {return}
+        
+        Task{
+            if let data = try? await  pickerItem.loadTransferable(type:Data.self),
+               let image = UIImage(data: data){
+                await   MainActor.run{
+                    self.selectedImage = image
+                }
+            }
+        }
+    }
     func addNote(title: String, content: String) {
         interactor.addNote(title: title, content: content)
     }
+    
+    func handleUploadImage(){
+        
+    }
+    
+    func handlePasteText(){
+        
+    }
+    
+    func handleUseYouTubeVideo(){
+        
+    }
+    
+    func handlePasteLink(){
+        
+    }
+    
+    func handleRecordAudio(){
+        
+    }
+    
+    
 }

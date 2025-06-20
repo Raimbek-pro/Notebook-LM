@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NoteListView: View {
     @ObservedObject  var presenter: NoteListPresenter
+    @ObservedObject var router: NoteListRouter
     var body: some View {
         VStack{
             NavigationView{
@@ -25,7 +26,7 @@ struct NoteListView: View {
                 presenter.didCreateNote()
             }){
                 Text("new note")
-            }.sheet(isPresented: $presenter.NoteAddToggle){
+            }.sheet(isPresented: $router.NoteAddToggle){
                 AddNoteBuilder.build()
             }
         }

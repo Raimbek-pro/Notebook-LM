@@ -5,16 +5,61 @@
 //  Created by Райымбек Омаров on 16.06.2025.
 //
 import SwiftUI
+import PhotosUI
 
 struct AddNoteView: View{
+    
+    // MARK: -image picker
+    @State private var selectionImage : PhotosPickerItem?
+    @State private var isImagePickerPresented: Bool = false
+
+    
+    //MARK: -observed for presenter
     @ObservedObject var presenter :AddNotePresenter
     var body : some View{
-//        NavigationView{
-//
-//        }
-        List{
-            Text("Hello, World!")
-            Text("2")
+        NavigationView{
+            List {
+                Section (header: Text("New Notebook")){
+                    Button("Upload image"){
+                        isImagePickerPresented = true
+                    }
+                    .photosPicker(isPresented: $isImagePickerPresented,selection:$selectionImage,matching:.images)
+                    if let selectedImage = presenter.selectedImage{
+                        Image(uiImage: selectedImage)
+                            .resizable()
+                            .scaledToFit( )
+                            .frame(height:200)
+                    }
+                    Button("Paste Text"){
+                        
+                    }
+                    Button("Use Youtube Video"){
+                        
+                    }
+                    Button("Paste Link"){
+                        
+                    }
+                    Button("Record Audio"){
+                        
+                    }
+                    Button("Take a photo"){
+                        
+                    }
+                    Button("Upload Audio"){
+                        
+                    }
+                    Button("Upload PDF"){
+                        
+                    }
+                }
+            }
         }
+        .navigationTitle("New2 Notebook")
+        .onChange(of: selectionImage) {
+            presenter.loadImage(from: selectionImage)
+      
+        }
+        
+
     }
 }

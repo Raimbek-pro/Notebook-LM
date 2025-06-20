@@ -12,7 +12,7 @@ final class NoteListPresenter : ObservableObject {
     private let router : NoteListRouter
     
     @Published var notes : [Note] = []
-    @Published var NoteAddToggle : Bool = false
+    
     init(interactor: NoteListInteractor, router: NoteListRouter) {
         self.interactor = interactor
         self.router = router
@@ -29,7 +29,7 @@ final class NoteListPresenter : ObservableObject {
     }
     
     func didCreateNote() {
-        NoteAddToggle = true
+      
         router.navigateToAddNote()
     }
 }

@@ -13,7 +13,7 @@ enum NoteListBuilder {
         let router = NoteListRouter()
         let presenter = NoteListPresenter(interactor: interactor, router: router)
         
-        let view = NoteListView(presenter: presenter)
+        let view = NoteListView(presenter: presenter, router: router)
         return view
     }
 }
