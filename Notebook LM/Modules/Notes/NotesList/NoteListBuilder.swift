@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 enum NoteListBuilder {
-    static func build() -> some View {
-        let interactor = NoteListInteractor()
+    static func build(context: ModelContext) -> some View {
+        let interactor = NoteListInteractor(context: context)
         let router = NoteListRouter()
         let presenter = NoteListPresenter(interactor: interactor, router: router)
         

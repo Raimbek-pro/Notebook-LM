@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-
+import SwiftData
 @main
 struct Notebook_LMApp: App {
-    let persistenceController = PersistenceController.shared
+   
 
     var body: some Scene {
         WindowGroup {
-            NoteListBuilder.build()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            AppEntryPoint()
+                .modelContainer(for:Note.self)
         }
     }
 }

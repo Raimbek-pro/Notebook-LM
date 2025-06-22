@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
 
 final class NotesDetailbuilder {
-    var note: Note
-    init(note: Note) {
+    @Environment(\.modelContext) var context
+    var id: PersistentIdentifier
+    init(id : PersistentIdentifier) {
         
-        self.note = note
+        self.id = id
     }
-    static func build(note : Note) -> some View {
-        let interactor = NotesDetailIntector(note: note)
+    static func build(id : PersistentIdentifier,context:ModelContext) -> some View {
+        let interactor = NotesDetailIntector(id: id, context: context)
         let presenter = NotesDetailPresenter(interactor: interactor)
         let view = NotesDetailView(presenter: presenter)
         return view

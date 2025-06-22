@@ -7,9 +7,10 @@
 
 
 import SwiftUI
+import SwiftData
 enum AddNoteBuilder {
-   static func build() -> some View{
-       let interactor = AddNoteInteractor()
+    static func build(context:ModelContext) -> some View{
+        let interactor = AddNoteInteractor(context: context)
        let router = AddNoteRouter()
        let presenter = AddNotePresenter(interactor: interactor, router: router)
        let view = AddNoteView(presenter: presenter, router: router)

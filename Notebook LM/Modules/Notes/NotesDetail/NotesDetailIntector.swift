@@ -5,13 +5,24 @@
 //  Created by Райымбек Омаров on 20.06.2025.
 //
 
+import SwiftData
+import SwiftUI
+
 protocol NotesDetailIntectorProtocol{
     
 }
 final class NotesDetailIntector {
-    var note : Note
-    init(note: Note) {
-        self.note = note
+    let context : ModelContext
+    var id : PersistentIdentifier
+     var note : Note?
+    init(id: PersistentIdentifier,context: ModelContext) {
+        self.id = id
+        self.context = context
+        self.note =  context.model(for: id) as? Note
     }
     
+    func loadImage() -> UIImage{
+     
+        return note?.uiImage ?? UIImage()
+    }
 }

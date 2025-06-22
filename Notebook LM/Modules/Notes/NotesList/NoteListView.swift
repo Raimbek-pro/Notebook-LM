@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct NoteListView: View {
+    @Environment(\.modelContext) var context
     @ObservedObject  var presenter: NoteListPresenter
     @ObservedObject var router: NoteListRouter
+ 
+    
     var body: some View {
         VStack{
             NavigationView{
@@ -18,6 +22,13 @@ struct NoteListView: View {
                         presenter.didSelectNote(note)
                     }){
                         Text(note.text ?? "")
+                        if let image = note.uiImage{
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit( )
+                                .frame(height:40)
+                        }
+                      
                     }
                 }
                 .navigationTitle(Text("Notes"))
@@ -27,8 +38,8 @@ struct NoteListView: View {
             }){
                 Text("new note")
             }.sheet(isPresented: $router.NoteAddToggle){
-                AddNoteBuilder.build()
+                AddNoteBuilder.build(context: context)
             }
         }
-    }
+            }
 }

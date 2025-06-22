@@ -19,9 +19,7 @@ struct NotesDetailView: View {
                 .resizable()
                 .scaledToFit()
         }
-        .onAppear {
-            presenter.showNoteImage()
-        }
+     
 
     }
 }

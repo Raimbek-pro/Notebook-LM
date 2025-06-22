@@ -17,10 +17,11 @@ final class NotesDetailPresenter: ObservableObject,NotesDetailPresenterProcol{
     @Published var image : UIImage = UIImage()
     init(interactor: NotesDetailIntector) {
         self.interactor = interactor
+        self.image = interactor.loadImage()
     }
     
     
-    func showNoteImage() {
-        self.image = interactor.note.image ?? UIImage()
-    }
+  
+       
+    
 }

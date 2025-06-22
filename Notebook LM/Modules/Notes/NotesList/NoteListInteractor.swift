@@ -5,16 +5,22 @@
 //  Created by Райымбек Омаров on 16.06.2025.
 //
 
+import SwiftData
+
+import SwiftUI
+
 protocol NoteListInteractorProtocol {
     func fetchNotes() -> [Note]
 }
 
 final class NoteListInteractor: NoteListInteractorProtocol {
+    var context : ModelContext
+    init(context: ModelContext) {
+        self.context = context
+    }
+ 
     func fetchNotes() -> [Note] {
-        return [
-            Note(id:1,text:"Buy milk"),
-            Note(id:2,text:"Buy eggs")
-        ]
+        (try? context.fetch(FetchDescriptor<Note>())) ?? []
     }
     
     

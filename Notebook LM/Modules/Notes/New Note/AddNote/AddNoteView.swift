@@ -12,7 +12,7 @@ struct AddNoteView: View{
     // MARK: -image picker
     @State private var selectionImage : PhotosPickerItem?
     @State private var isImagePickerPresented: Bool = false
-
+    @Environment(\.modelContext) var context
     
     //MARK: -observed for presenter
     @ObservedObject var presenter :AddNotePresenter
@@ -22,7 +22,7 @@ struct AddNoteView: View{
             List {
                 Section (header: Text("New Notebook")){
                     if let notedetail = presenter.note{
-                        NavigationLink(destination:NotesDetailbuilder.build(note: notedetail),isActive: $router.shouldNavigate){
+                        NavigationLink(destination:NotesDetailbuilder.build(id: notedetail.id, context: context),isActive: $router.shouldNavigate){
                             EmptyView()
                         }
                     }
