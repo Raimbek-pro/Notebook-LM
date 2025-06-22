@@ -13,8 +13,12 @@ struct NotesDetailView: View {
 
     var body: some View {
         VStack{
-            Text("wow")
-                
+            TextField("type something here", text: $presenter.title)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            Button("Save title"){
+                presenter.addTitle()
+            }
             Image(uiImage: presenter.image)
                 .resizable()
                 .scaledToFit()

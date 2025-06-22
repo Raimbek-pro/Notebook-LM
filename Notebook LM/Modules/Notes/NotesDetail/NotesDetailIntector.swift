@@ -25,4 +25,11 @@ final class NotesDetailIntector {
      
         return note?.uiImage ?? UIImage()
     }
+    
+    func addTitle(text:String?){
+        if let text = text{
+            note?.text = text
+        }
+         try? context.save()
+    }
 }

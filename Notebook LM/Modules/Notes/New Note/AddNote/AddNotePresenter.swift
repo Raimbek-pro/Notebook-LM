@@ -11,20 +11,21 @@ import PhotosUI
 
 final class AddNotePresenter : ObservableObject{
     
-    
+    let onFinish: (Note) -> Void
     @Published var selectedImage: UIImage? = nil
 
     @Published var note : Note?
     private let interactor: AddNoteInteractor
     private let router: AddNoteRouter
 
-    init(interactor: AddNoteInteractor, router: AddNoteRouter) {
+    init(interactor: AddNoteInteractor, router: AddNoteRouter,onFinish: @escaping (Note) -> Void) {
         self.interactor = interactor
 
         self.router = router
+        self.onFinish = onFinish
     }
     
-    
+
     
     func  loadImage(from pickerItem: PhotosPickerItem?){
         guard let pickerItem else {return}
@@ -37,6 +38,9 @@ final class AddNotePresenter : ObservableObject{
                     interactor.addImage(content:image)
                     note = interactor.note
                     router.navigateToNoteDetail()
+                    if let note = note {
+                        onFinish(note)
+                    }
                 }
             }
         }

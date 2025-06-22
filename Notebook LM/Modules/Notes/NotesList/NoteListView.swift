@@ -16,6 +16,7 @@ struct NoteListView: View {
     
     var body: some View {
         VStack{
+            
             NavigationView{
                 List(presenter.notes, id :\.id){ note in
                     Button(action: {
@@ -32,13 +33,28 @@ struct NoteListView: View {
                     }
                 }
                 .navigationTitle(Text("Notes"))
+                .background(
+                    NavigationLink(isActive: $router.shouldNavigate) {
+                    if let note = router.selectedNote {
+                        NotesDetailbuilder.build(id: note.id, context: context)
+                    }
+                } label: {
+                    EmptyView()
+                }
+                .hidden()
+)
+                
             }
             Button(action: {
                 presenter.didCreateNote()
             }){
                 Text("new note")
             }.sheet(isPresented: $router.NoteAddToggle){
-                AddNoteBuilder.build(context: context)
+                AddNoteBuilder.build(context: context){ newNote in
+                    presenter.notes.insert(newNote, at: 0)
+                    router.NoteAddToggle = false
+                    router.navigateToNoteDetail(note: newNote)
+                }
             }
         }
             }

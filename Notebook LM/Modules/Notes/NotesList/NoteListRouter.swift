@@ -14,8 +14,16 @@ protocol NoteListRouterProtocol {
 
 final class NoteListRouter :ObservableObject, NoteListRouterProtocol {
     @Published var NoteAddToggle : Bool = false
+    
+    
+    @Published var selectedNote: Note? = nil
+       @Published var shouldNavigate: Bool = false
+
+    
     func navigateToNoteDetail( note: Note) {
-        print ( " Navigate to note detail \(note.text)")
+        selectedNote = note
+        shouldNavigate = true
+        
     }
     
     func navigateToAddNote() {

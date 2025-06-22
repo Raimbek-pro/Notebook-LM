@@ -15,11 +15,17 @@ protocol NotesDetailPresenterProcol {
 final class NotesDetailPresenter: ObservableObject,NotesDetailPresenterProcol{
     private var interactor: NotesDetailIntector
     @Published var image : UIImage = UIImage()
+    @Published var title : String = ""
     init(interactor: NotesDetailIntector) {
         self.interactor = interactor
         self.image = interactor.loadImage()
+        
+        
     }
     
+    func addTitle ( ){
+        interactor.addTitle(text: title)
+    }
     
   
        

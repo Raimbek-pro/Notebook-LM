@@ -21,11 +21,11 @@ struct AddNoteView: View{
         NavigationView{
             List {
                 Section (header: Text("New Notebook")){
-                    if let notedetail = presenter.note{
-                        NavigationLink(destination:NotesDetailbuilder.build(id: notedetail.id, context: context),isActive: $router.shouldNavigate){
-                            EmptyView()
-                        }
-                    }
+//                    if let notedetail = presenter.note{
+//                        NavigationLink(destination:NotesDetailbuilder.build(id: notedetail.id, context: context),isActive: $router.shouldNavigate){
+//                            EmptyView()
+//                        }
+//                    }
                     Button("Upload image"){
                         isImagePickerPresented = true
                      
