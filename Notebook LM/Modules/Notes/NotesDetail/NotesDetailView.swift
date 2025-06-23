@@ -7,12 +7,27 @@
 
 import Foundation
 import SwiftUI
+
 struct NotesDetailView: View {
+    @Environment(\.dismiss) var dismiss
     @ObservedObject var presenter : NotesDetailPresenter
+   
   //  @Published var note: Note?
 
     var body: some View {
+        
         VStack{
+            HStack{
+                Spacer()
+                Button(action: {
+                    presenter.deleteNote()
+                 
+                    dismiss()
+                }){
+                    Image(systemName: "trash")
+                }
+               
+            }
             TextField("type something here", text: $presenter.title)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()

@@ -36,7 +36,13 @@ struct NoteListView: View {
                 .background(
                     NavigationLink(isActive: $router.shouldNavigate) {
                     if let note = router.selectedNote {
-                        NotesDetailbuilder.build(id: note.id, context: context)
+                        NotesDetailbuilder.build(id: note.id, context: context, onDeleted:
+                                                    {deletedNoted in
+                            presenter.notes.removeAll(where: { $0.id == deletedNoted.id })
+                            router.shouldNavigate = false
+                            router.selectedNote = nil
+                            
+                        })
                     }
                 } label: {
                     EmptyView()

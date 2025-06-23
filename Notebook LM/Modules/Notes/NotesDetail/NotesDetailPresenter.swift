@@ -16,17 +16,25 @@ final class NotesDetailPresenter: ObservableObject,NotesDetailPresenterProcol{
     private var interactor: NotesDetailIntector
     @Published var image : UIImage = UIImage()
     @Published var title : String = ""
-    init(interactor: NotesDetailIntector) {
+    let onDeleted: (Note) -> Void
+    init(interactor: NotesDetailIntector, onDeleted: @escaping (Note) -> Void) {
         self.interactor = interactor
         self.image = interactor.loadImage()
         
-        
+        self.onDeleted = onDeleted
     }
     
     func addTitle ( ){
         interactor.addTitle(text: title)
     }
     
+    func deleteNote(){
+        interactor.deleteNote()
+        if let deletedNote = interactor.note {
+              onDeleted(deletedNote)
+          }
+        
+    }
   
        
     

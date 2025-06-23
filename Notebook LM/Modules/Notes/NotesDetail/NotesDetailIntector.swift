@@ -32,4 +32,11 @@ final class NotesDetailIntector {
         }
          try? context.save()
     }
+    
+    
+    func deleteNote(){
+        guard let note = note else {return}
+         context.delete(note)
+        try? context.save()
+    }
 }

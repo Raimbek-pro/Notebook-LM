@@ -15,11 +15,14 @@ final class NotesDetailbuilder {
         
         self.id = id
     }
-    static func build(id : PersistentIdentifier,context:ModelContext) -> some View {
+    static func build(id : PersistentIdentifier,context:ModelContext,onDeleted: @escaping (Note) -> Void) -> some View {
+        guard let note = context.model(for: id) as? Note else {
+            return AnyView(EmptyView())
+        }
         let interactor = NotesDetailIntector(id: id, context: context)
-        let presenter = NotesDetailPresenter(interactor: interactor)
+        let presenter = NotesDetailPresenter(interactor: interactor, onDeleted: onDeleted       )
         let view = NotesDetailView(presenter: presenter)
-        return view
+        return AnyView(view)
 
     }
 }
