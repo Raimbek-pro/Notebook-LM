@@ -26,3 +26,26 @@ class Note  {
     }
 
 }
+
+extension Note: Hashable {
+    public static func == (lhs: Note, rhs: Note) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+extension Note {
+    var thumbnailImage: UIImage? {
+        guard let data = imageData,
+              let image = UIImage(data: data) else { return nil }
+        
+        let size = CGSize(width: 60, height: 60)
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}

@@ -20,7 +20,7 @@ final class NotesDetailPresenter: ObservableObject,NotesDetailPresenterProcol{
     init(interactor: NotesDetailIntector, onDeleted: @escaping (Note) -> Void) {
         self.interactor = interactor
         self.image = interactor.loadImage()
-        
+        self.title = interactor.note?.text ?? ""
         self.onDeleted = onDeleted
     }
     

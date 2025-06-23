@@ -17,25 +17,25 @@ struct NoteListView: View {
     var body: some View {
         VStack{
             
-            NavigationView{
+            NavigationStack(path:$router.path){
                 List(presenter.notes, id :\.id){ note in
                     Button(action: {
-                        presenter.didSelectNote(note)
+                     //   presenter.didSelectNote(note)
+                        router.path.append(note)
                     }){
                         Text(note.text ?? "")
-                        if let image = note.uiImage{
-                            Image(uiImage: image)
+                        if let thumbnail = note.thumbnailImage {
+                            Image(uiImage: thumbnail)
                                 .resizable()
-                                .scaledToFit( )
-                                .frame(height:40)
+                                .scaledToFit()
+                                .frame(height: 40)
                         }
-                      
                     }
                 }
                 .navigationTitle(Text("Notes"))
-                .background(
-                    NavigationLink(isActive: $router.shouldNavigate) {
-                    if let note = router.selectedNote {
+                
+                .navigationDestination(for:Note.self) { note in
+                    
                         NotesDetailbuilder.build(id: note.id, context: context, onDeleted:
                                                     {deletedNoted in
                             presenter.notes.removeAll(where: { $0.id == deletedNoted.id })
@@ -43,12 +43,9 @@ struct NoteListView: View {
                             router.selectedNote = nil
                             
                         })
-                    }
-                } label: {
-                    EmptyView()
+                    
                 }
-                .hidden()
-)
+
                 
             }
             Button(action: {

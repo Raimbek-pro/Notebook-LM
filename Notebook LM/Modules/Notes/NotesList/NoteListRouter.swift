@@ -15,7 +15,7 @@ protocol NoteListRouterProtocol {
 final class NoteListRouter :ObservableObject, NoteListRouterProtocol {
     @Published var NoteAddToggle : Bool = false
     
-    
+    @Published var path: [Note] = []
     @Published var selectedNote: Note? = nil
        @Published var shouldNavigate: Bool = false
 
