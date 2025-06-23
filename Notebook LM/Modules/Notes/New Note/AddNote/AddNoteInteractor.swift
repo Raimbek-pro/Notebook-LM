@@ -36,4 +36,11 @@ final class AddNoteInteractor:AddNoteInteractorProtocol {
         //    }
         self.note = note
     }
+    
+    func addText(){
+        let note = Note(text:"")
+        context.insert(note)
+    try? context.save()
+        self.note = note
+    }
 }

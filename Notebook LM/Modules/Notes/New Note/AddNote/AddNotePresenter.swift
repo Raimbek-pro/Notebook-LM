@@ -58,7 +58,12 @@ final class AddNotePresenter : ObservableObject{
     }
     
     func handlePasteText(){
-        
+        interactor.addText()
+        note = interactor.note
+        router.navigateToNoteDetail()
+        if let note = note {
+            onFinish(note)
+        }
     }
     
     func handleUseYouTubeVideo(){

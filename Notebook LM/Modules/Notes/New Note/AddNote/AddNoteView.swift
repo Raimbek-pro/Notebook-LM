@@ -38,7 +38,7 @@ struct AddNoteView: View{
                             .frame(height:200)
                     }
                     Button("Paste Text"){
-                        
+                        presenter.handlePasteText( )
                     }
                     Button("Use Youtube Video"){
                         
