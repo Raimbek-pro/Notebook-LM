@@ -16,13 +16,12 @@ final class NoteListRouter :ObservableObject, NoteListRouterProtocol {
     @Published var NoteAddToggle : Bool = false
     
     @Published var path: [Note] = []
-    @Published var selectedNote: Note? = nil
-       @Published var shouldNavigate: Bool = false
+//    @Published var selectedNote: Note? = nil
+//       @Published var shouldNavigate: Bool = false
 
     
     func navigateToNoteDetail( note: Note) {
-        selectedNote = note
-        shouldNavigate = true
+        path.append(note)
         
     }
     

@@ -39,8 +39,7 @@ struct NoteListView: View {
                         NotesDetailbuilder.build(id: note.id, context: context, onDeleted:
                                                     {deletedNoted in
                             presenter.notes.removeAll(where: { $0.id == deletedNoted.id })
-                            router.shouldNavigate = false
-                            router.selectedNote = nil
+                         
                             
                         })
                     
